@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Summarizer Launcher",
+  "description": "Extracts YouTube transcript and lets you summarize via ChatGPT, Gemini, or Claude.",
+  "version": "1.0",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Summarizer Settings"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}

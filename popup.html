@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 10px; }
+    select, textarea, button { width: 100%; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h3>Summarizer Settings</h3>
+  <label>Select Platform:</label>
+  <select id="platform">
+    <option>ChatGPT</option>
+    <option>Gemini</option>
+    <option>Claude</option>
+  </select>
+
+  <label>Custom Prompt:</label>
+  <textarea id="prompt" rows="4" placeholder="e.g. Summarize this YouTube video: [transcript]"></textarea>
+
+  <button id="save">Save Settings</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
